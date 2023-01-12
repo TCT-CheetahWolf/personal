@@ -1,15 +1,7 @@
-body, html {
-  height: 100%;
-}
-
-.bg {
-  /* The image used */
+body
+{
   background-image: url("https://cdn.discordapp.com/attachments/979032800340623483/1061575642589692004/IMG_6305.png");
-
-  /* Full height */
   height: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
