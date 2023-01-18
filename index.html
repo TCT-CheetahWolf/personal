@@ -25,19 +25,22 @@
     margin:0;
     box-sizing:border-box;
   }
-  ul.images {
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    width: 900px;
-    overflow-x: auto;
-    background-color: #ddd;
-  }
-  ul.images li {
-    display: inline;
-    width: 150px;
-    height: 150px;
-  }
+.scroll-container{
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px 70px 5px 20px;
+  background: transparent;
+  height: 100%;
+  border-radius:15px;
+}
+
+.gridscroll{
+  display:inline-block;
+}
+
+.gridscroll img {
+  margin-right:22px;
+}
   .search{
     width:100%;
     height:100%;
@@ -332,12 +335,13 @@ function scrollFunction() {
  <br>
  <p>TCT originally started with the mascot "Cheetah Teddy" of the game Dancing Line. As he matures, the mascot evolves into Cheetah Fox, and finally turning to a final form, Cheetah Wolf. Their images are shown as a gallery below.</p>
  <br>
- <ul class="images">
-  <li><img src="https://static.miraheze.org/rollingloungewiki/d/df/CheetahTeddy.jpg"></li>
-  <li><img src="https://static.miraheze.org/rollingloungewiki/thumb/3/30/CheetahFox1.png/440px-CheetahFox1.png?20220821065743" width="269" height="367"></li>
-  <li></li>
-  <li></li>
-  <li></li>
+<div class="scroll-container">
+  <div class="gridscroll">
+      <img src="https://static.miraheze.org/rollingloungewiki/d/df/CheetahTeddy.jpg"/>
+      <img src="https://static.miraheze.org/rollingloungewiki/thumb/3/30/CheetahFox1.png/440px-CheetahFox1.png?20220821065743" width="210" height="306"/>
+      <img src="https://static.miraheze.org/rollingloungewiki/0/0d/CheetahFox2.png" width="225" height="225"/>
+  </div>
+</div>
  </ul>
 </div>
 </body>
