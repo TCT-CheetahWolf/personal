@@ -277,17 +277,6 @@ function scrollFunction() {
 }
 </script>
 <div class="overlay"></div>
-<script>
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    document.getElementById("overlay").style.opacity = "1";
-  } else {
-    document.getElementById("overlay").style.opacity = "0";
-  }
-}
-</script>
 <div class="bg">
   <div class="bg-context">
     <div class="context">
