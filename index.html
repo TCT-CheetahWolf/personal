@@ -3,6 +3,8 @@
 
 <head>
  <title>TCT | Art, Design, Game Development</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1282289028904915047/1284767033741017138/IMG_2615-1.ico?ex=66e7d40a&is=66e6828a&hm=5e43cd1d2fd78ddd1d67ad916300895bf30db637ae675ac0d5b657252c3a6759&">
 <style>
  @font-face {
@@ -25,6 +27,17 @@
     margin:0;
     box-sizing:border-box;
   }
+.overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
 .scroll-container{
   overflow: auto;
   white-space: nowrap;
@@ -261,6 +274,7 @@ function scrollFunction() {
   }
 }
 </script>
+<div class="overlay"></div>
 <div class="bg">
   <div class="bg-context">
     <div class="context">
