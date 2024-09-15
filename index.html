@@ -36,7 +36,7 @@
     background-color: rgba(0, 0, 0, 1);
     z-index: 1000;
     opacity: 1;
-    transition: opacity 1s ease-out;
+    transition: opacity 1s;
 }
 .scroll-container{
   overflow: auto;
@@ -276,21 +276,14 @@ function scrollFunction() {
 </script>
 <div class="overlay"></div>
 <script>
- document.addEventListener('DOMContentLoaded', () => {
+ window.addEventListener('load', function() {
     const overlay = document.getElementById('overlay');
+    overlay.style.opacity = '0'; // Start fading out the overlay
 
-    // Function to handle the fade-out
-    const fadeOutOverlay = () => {
-        overlay.style.opacity = '0'; // Start fading out
-
-        // Wait for the CSS transition to finish before hiding
-        setTimeout(() => {
-            overlay.style.display = 'none'; // Remove overlay from view
-        }, 1000); // This should match the transition duration
-    };
-
-    // Ensure the fade-out happens after the content is fully loaded
-    setTimeout(fadeOutOverlay, 100); // Delay slightly to ensure the overlay is present initially
+    // Optionally, hide the overlay completely after the transition ends
+    overlay.addEventListener('transitionend', function() {
+        overlay.style.display = 'none';
+    });
 });
 </script>
 <div class="bg">
