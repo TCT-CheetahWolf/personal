@@ -278,20 +278,14 @@ function scrollFunction() {
 </script>
 <div class="overlay"></div>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
     const overlay = document.getElementById("overlay");
+    overlay.style.opacity = "0"; // Start fading out the overlay
 
-    // Ensure overlay is present
-    if (overlay) {
-        // Fade out the overlay
-        overlay.style.opacity = "0";
-
-        // Hide overlay completely after the transition
-        overlay.addEventListener("transitionend", function() {
-            overlay.style.display = "none";
-            document.body.style.overflow = "auto"; // Re-enable scrolling after overlay is gone
-        });
-    }
+    // Optionally, hide the overlay completely after the transition ends
+    overlay.addEventListener("transitionend", function() {
+        overlay.style.display = "none";
+    });
 });
 </script>
 <div class="bg">
