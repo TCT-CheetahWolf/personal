@@ -38,15 +38,6 @@
     opacity: 1;
     transition: opacity 1s ease-out;
 }
- window.addEventListener('load', () => {
-    const overlay = document.getElementById('overlay');
-    setTimeout(() => {
-        overlay.style.opacity = '0';
-        setTimeout(() => {
-            overlay.style.display = 'none';
-        }, 1000);
-    }, 0);
-});
 .scroll-container{
   overflow: auto;
   white-space: nowrap;
@@ -284,6 +275,17 @@ function scrollFunction() {
 }
 </script>
 <div class="overlay"></div>
+<script>
+ window.addEventListener('load', () => {
+    const overlay = document.getElementById('overlay');
+    setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 1000);
+    }, 0);
+});
+</script>
 <div class="bg">
   <div class="bg-context">
     <div class="context">
