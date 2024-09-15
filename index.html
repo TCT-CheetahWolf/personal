@@ -276,14 +276,21 @@ function scrollFunction() {
 </script>
 <div class="overlay"></div>
 <script>
- window.addEventListener('load', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
-    setTimeout(() => {
-        overlay.style.opacity = '0';
+
+    // Function to handle the fade-out
+    const fadeOutOverlay = () => {
+        overlay.style.opacity = '0'; // Start fading out
+
+        // Wait for the CSS transition to finish before hiding
         setTimeout(() => {
-            overlay.style.display = 'none';
-        }, 1000);
-    }, 0);
+            overlay.style.display = 'none'; // Remove overlay from view
+        }, 1000); // This should match the transition duration
+    };
+
+    // Ensure the fade-out happens after the content is fully loaded
+    setTimeout(fadeOutOverlay, 100); // Delay slightly to ensure the overlay is present initially
 });
 </script>
 <div class="bg">
